@@ -69,12 +69,12 @@ while True:
     v = velocity()
 
     # события спуска (циклограмма «Гюйгенса»)
-    if phase == 0 and h < 62700:
+    if phase == 0 and h < 63100:
         vessel.control.sas = False
         vessel.control.activate_next_stage()
         print("Основной купол на", round(h), "м")
         phase = 1
-    elif phase == 1 and h < 60800:
+    elif phase == 1 and h < 61000:
         vessel.control.activate_next_stage()
         print("Щит отстрелен на", round(h), "м")
         phase = 2
